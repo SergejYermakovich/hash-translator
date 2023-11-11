@@ -15,3 +15,5 @@ services:
     restart: on-failure
     environment:
       AUTHORIZATION_HELLO_TEMPLATE: configured authorization hello for %s from %s
+    ports:
+       - "8081:8081"
