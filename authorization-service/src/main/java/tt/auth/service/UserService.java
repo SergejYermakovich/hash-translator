@@ -13,7 +13,6 @@ public class UserService {
 
     private UserRepository userRepository;
 
-
     public void createUser(UserDto userDto) {
         // Валидация и сохранение пользователя в базу данных
     }
