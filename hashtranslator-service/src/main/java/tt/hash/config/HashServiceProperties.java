@@ -7,9 +7,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConfigurationProperties(prefix = "hashtranslator.hello")
 @Data
-public class HelloProperties {
-    /**
-     * Template for greeting message should have 2 %s placeholders: for name and hostname
-     */
+public class HashServiceProperties {
+
     private String template = "Hello %s from %s";
+    private String HASH_SERVICE_ADDRESS = "http://hash-code.io";
 }

@@ -6,12 +6,12 @@ import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 import org.springframework.security.web.SecurityFilterChain;
+import tt.auth.model.Role;
 
 @Configuration
 public class SecurityBasicConfiguration {
@@ -26,12 +26,12 @@ public class SecurityBasicConfiguration {
         UserDetails user1 = User.builder()
                 .username("mike")
                 .password(encoder().encode("important"))
-                .roles("CAPTAIN", "CREW")
+                .roles( Role.ADMIN.name(), Role.USER.name())
                 .build();
         UserDetails user2 = User.builder()
                 .username("henrik")
                 .password(encoder().encode("important"))
-                .roles("CREW")
+                .roles(Role.ADMIN.name())
                 .build();
         return new InMemoryUserDetailsManager(user1, user2);
     }

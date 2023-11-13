@@ -3,7 +3,7 @@ package tt.hash.service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tt.hash.config.HelloProperties;
+import tt.hash.config.HashServiceProperties;
 
 
 import java.net.InetAddress;
@@ -12,10 +12,10 @@ import java.net.UnknownHostException;
 @Slf4j
 @Service
 public class HelloService {
-    private final HelloProperties properties;
+    private final HashServiceProperties properties;
 
     @Autowired
-    public HelloService(HelloProperties properties) {
+    public HelloService(HashServiceProperties properties) {
         this.properties = properties;
     }
 
