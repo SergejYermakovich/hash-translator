@@ -21,11 +21,14 @@ public class UserService {
     }
 
     public void deleteUser(Long userId) {
-        // Удаление пользователя из базы данных
+        User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User no found."));
+        userRepository.delete(user);
+
+        log.info("User deleted with id {}", userId);
     }
 
     public List<User> findAllUsers() {
-     return userRepository.findAll();
+        return userRepository.findAll();
     }
 
 

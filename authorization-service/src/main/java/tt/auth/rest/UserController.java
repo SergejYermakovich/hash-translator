@@ -3,6 +3,7 @@ package tt.auth.rest;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+// убрать *
 import tt.auth.dto.UserDto;
 import tt.auth.model.User;
 import tt.auth.service.UserService;
@@ -30,6 +31,7 @@ public class UserController {
 
     @GetMapping
     public ResponseEntity<List<User>> getUsers() {
+        //mapper mapstruct отдавть дто
         return ResponseEntity.ok(userService.findAllUsers());
     }
 }
