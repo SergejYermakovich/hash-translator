@@ -19,7 +19,7 @@ public class UserService {
     private UserMapper userMapper;
 
     public void createUser(UserDto userDto) {
-        User user = userMapper.map(userDto);
+        User user = userMapper.mapToEntity(userDto);
         User savedUser = userRepository.save(user);
         log.info("User saved with id {}", savedUser.getId());
     }

@@ -1,15 +1,17 @@
 package tt.auth.mapper;
 
 import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
 import tt.auth.dto.UserDto;
 import tt.auth.model.User;
 
-import java.util.List;
-
-@Mapper
+@Mapper(componentModel = "spring")
 public interface UserMapper {
 
-    User map(UserDto userDto);
+    UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
-    List<UserDto> mapAllUsersToDto(List<User> users);
+    User mapToEntity(UserDto userDto);
+
+    UserDto mapToDto(User user);
+
 }
