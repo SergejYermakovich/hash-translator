@@ -2,6 +2,7 @@ package tt.auth.rest;
 
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import tt.auth.dto.UserDto;
 import tt.auth.mapper.UserMapper;
@@ -17,10 +18,9 @@ import java.util.stream.Collectors;
 public class UserController {
 
     private UserService userService;
-    private UserMapper userMapper;
 
     @PostMapping
-    public ResponseEntity<?> createUser(@RequestBody UserDto userDto) {
+    public ResponseEntity<?> createUser(@RequestBody @Validated UserDto userDto) {
         userService.createUser(userDto);
         return ResponseEntity.ok("User created successfully");
     }

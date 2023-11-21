@@ -10,5 +10,6 @@ import org.springframework.context.annotation.Configuration;
 public class HashServiceProperties {
 
     private String template = "Hello %s from %s";
-    private String HASH_SERVICE_ADDRESS = "http://hash-code.io";
+    private static String HASH_SERVICE_ADDRESS = "http://hash-code.io";
+    public static String DEFAULT_HASH_VALUE = "";
 }
