@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConfigurationProperties(prefix = "authorization.hello")
 @Data
-public class HelloProperties {
+public class AuthServiceProperties {
     /**
      * Template for greeting message should have 2 %s placeholders: for name and hostname
      */

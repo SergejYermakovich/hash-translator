@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Configuration;
 @Data
 public class HashServiceProperties {
 
-    private String template = "Hello %s from %s";
-    private static String HASH_SERVICE_ADDRESS = "http://hash-code.io";
+    public static String HASH_SERVICE_ADDRESS = "https://hashingservice.com";
     public static String DEFAULT_HASH_VALUE = "";
 }

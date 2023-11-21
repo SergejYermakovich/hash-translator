@@ -17,7 +17,7 @@ import tt.auth.model.Role;
 public class SecurityBasicConfiguration {
 
     @Bean
-    public PasswordEncoder encoder(){
+    public PasswordEncoder encoder() {
         return new BCryptPasswordEncoder();
     }
 
@@ -26,7 +26,7 @@ public class SecurityBasicConfiguration {
         UserDetails user1 = User.builder()
                 .username("mike")
                 .password(encoder().encode("important"))
-                .roles( Role.ADMIN.name(), Role.USER.name())
+                .roles(Role.ADMIN.name(), Role.USER.name())
                 .build();
         UserDetails user2 = User.builder()
                 .username("henrik")

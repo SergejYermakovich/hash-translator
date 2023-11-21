@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
 @SpringBootApplication
-@ConfigurationPropertiesScan("tt.hashtranslator.config")
+@ConfigurationPropertiesScan("tt.hash.config")
 public class HashTranslatorApplication {
     public static void main(String[] args) {
         SpringApplication.run(HashTranslatorApplication.class, args);
