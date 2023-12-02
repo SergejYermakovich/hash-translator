@@ -9,6 +9,6 @@ import org.springframework.context.annotation.Configuration;
 @Data
 public class HashServiceProperties {
 
-    public static String HASH_SERVICE_ADDRESS = "https://hashingservice.com";
+    public static String HASH_SERVICE_ADDRESS = "https://hashingservice.com/ajax.php";
     public static String DEFAULT_HASH_VALUE = "";
 }
